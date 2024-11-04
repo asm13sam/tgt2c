@@ -1,0 +1,12 @@
+certifi==2024.8.30
+charset-normalizer==3.4.0
+darkdetect==0.7.1
+idna==3.10
+PyQt6==6.7.1
+PyQt6-Qt6==6.7.3
+PyQt6_sip==13.8.0
+pyqtdarktheme==2.1.0
+python-barcode==0.15.1
+requests==2.32.3
+urllib3==2.2.3
+XlsxWriter==3.2.0

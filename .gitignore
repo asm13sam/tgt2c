@@ -1,0 +1,6 @@
+__pycache__
+*.db
+config.json
+others
+menv
+builder

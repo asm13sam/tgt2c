@@ -1,0 +1,38 @@
+{
+    "measure": {
+        "hum": "Од. виміру",
+        "fields": {
+            "id": {"hum": "Номер"},
+            "name": {"hum": "Назва"},
+            "full_name": {"hum": "Повна назва"},
+            "is_active": {"hum": "Діючий"}
+        }
+    },
+    "matherial_group": {
+        "hum": "Група матеріалів",
+        "fields": {
+            "id": {"hum": "Номер"},
+            "name": {"hum": "Назва"},
+            "matherial_group_id": {"hum": "Група матеріалів"},
+            "position": {"hum": "Позиція"},
+            "is_active": {"hum": "Діючий"}
+        }
+    },
+    "matherial": {
+        "hum": "Модель",
+        "fields": {
+            "id": {"hum": "Номер"},
+            "name": {"hum": "Назва"},
+            "full_name": {"hum": "Повна назва"},
+            "matherial_group_id": {"hum": "Група матеріалів"},
+            "measure_id": {"hum": "Од. виміру"},
+            "color_group_id": {"hum": "Група кольору"},
+            "price": {"hum": "Ціна"},
+            "cost": {"hum": "Вартість"},
+            "total": {"hum": "В наявності"},
+            "barcode": {"hum": "Штрихкод"},
+            "count_type_id": {"hum": "Група обліку"},
+            "is_active": {"hum": "Діючий"}
+        }
+    }
+}

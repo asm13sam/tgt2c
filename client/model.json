@@ -1,0 +1,35 @@
+{
+    "measure": {
+        "fields": {
+            "id": {"def": 0},
+            "name": {"def": ""},
+            "full_name": {"def": ""},
+            "is_active": {"def": true}
+        }
+    },
+    "matherial_group": {
+        "fields": {
+            "id": {"def": 0},
+            "name": {"def": ""},
+            "matherial_group_id": {"def": 0},
+            "position": {"def": 0},
+            "is_active": {"def": true}
+        }
+    },
+    "matherial": {
+        "fields": {
+            "id": {"def": 0},
+            "name": {"def": ""},
+            "full_name": {"def": ""},
+            "matherial_group_id": {"def": 0},
+            "measure_id": {"def": 0},
+            "color_group_id": {"def": 0},
+            "price": {"def": 0.0},
+            "cost": {"def": 0.0},
+            "total": {"def": 0.0},
+            "barcode": {"def": ""},
+            "count_type_id": {"def": 0},
+            "is_active": {"def": true}
+        }
+    }
+}
