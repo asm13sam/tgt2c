@@ -34,5 +34,23 @@
             "count_type_id": {"hum": "Група обліку"},
             "is_active": {"hum": "Діючий"}
         }
+    },
+    "color_group": {
+        "hum": "Група кольору",
+        "fields": {
+            "id": {"hum": "Номер"},
+            "name": {"hum": "Назва"},
+            "color_group_id": {"hum": "Група кольору"},
+            "position": {"hum": "Позиція"},
+            "is_active": {"hum": "Діючий"}
+        }
+    },
+    "count_type": {
+        "hum": "Група обліку",
+        "fields": {
+            "id": {"hum": "Номер"},
+            "name": {"hum": "Назва"},
+            "is_active": {"hum": "Діючий"}
+        }
     }
 }

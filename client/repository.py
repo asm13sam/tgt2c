@@ -23,7 +23,7 @@ class Data:
         return self.format_response(response)
     
     def delete(self, model_name: str, id: int):
-        url = f'{self.base_url}{model_name}/{id}?delete=1'
+        url = f'{self.base_url}{model_name}/{id}?mode=delete'
         print('DELETE', url)
         response = requests.delete(url)
         return self.format_response(response)

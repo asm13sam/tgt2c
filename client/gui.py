@@ -9,7 +9,7 @@ from PyQt6.QtGui import QKeySequence, QShortcut, QFont
 import sys
 import qdarktheme
 
-from widgets import Info, Table, Tree, TableModel
+from widgets import Info, Table, Tree, TableModel, DTable
 from model import Item
 from form import CustomForm
 from dialogs import error
@@ -35,11 +35,12 @@ class Window(QWidget):
         self.tabs.addTab(info, 'Одиниця виміру')
 
         mes_tbl_model = TableModel('measure')
-        mes_tbl = Table(mes_tbl_model)
+        mes_tbl = DTable(mes_tbl_model)
         err = measure.get_all()
         if not err:
             mes_tbl.set_values(measure.values)
         self.tabs.addTab(mes_tbl, 'Одиниці виміру')
+        mes_tbl.actionInvoked.connect(lambda action, value, item=measure: self.action(item, value, action))
 
         mg_form = CustomForm('matherial_group')
         mg = Item('matherial_group')
@@ -51,7 +52,7 @@ class Window(QWidget):
 
         me_form = CustomForm('measure')
         me = Item('measure')
-        err = me.get(3)
+        err = me.get(5)
         if not err:
             me_form.set_value(me.value)
         self.tabs.addTab(me_form, 'Форма Me')
@@ -82,6 +83,14 @@ class Window(QWidget):
             mat_info.set_value(mat.value)
         self.tabs.addTab(mat_info, 'Матеріал')
 
+        mat_form = CustomForm('matherial')
+        err = mat.get(5)
+        if not err:
+            mat_form.set_value(mat.value)
+        self.tabs.addTab(mat_form, 'Форма Mat')
+        mat_form.saveRequested.connect(lambda value, item=mat: self.save_form(item, value))
+
+
     def save_form(self, item, value):
         item.value = value
         err = item.create()
@@ -93,6 +102,17 @@ class Window(QWidget):
     def reload_tab(self, index):
         w = self.tabs.widget(index)
         w.reload_widget()
+
+    def action(self, item, value, action):
+        item.value = value
+        if action == 'delete':
+            err = item.delete(value['id'])
+            if err:
+                error(err)
+                return
+            print(item.name, 'deleted')
+
+        
     
 
 class MainWindow():
