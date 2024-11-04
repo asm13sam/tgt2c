@@ -31,5 +31,21 @@
             "count_type_id": {"def": 0},
             "is_active": {"def": true}
         }
+    },
+    "color_group": {
+        "fields": {
+            "id": {"def": 0},
+            "name": {"def": ""},
+            "color_group_id": {"def": 0},
+            "position": {"def": 0},
+            "is_active": {"def": true}
+        }
+    },
+    "count_type": {
+        "fields": {
+            "id": {"def": 0},
+            "name": {"def": ""},
+            "is_active": {"def": true}
+        }
     }
 }

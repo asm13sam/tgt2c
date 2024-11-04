@@ -195,7 +195,6 @@ class Table(QTableView, ProtoWidget):
     #     self.tableChanged.emit()
 
     def reload_widget(self):
-        print('reloading table', self._model.name)
         item = Item(self._model.name)
         err = item.get_all()
         if err:
@@ -300,7 +299,6 @@ class DTable(QWidget):
         if not err:
             self._table.set_values(ft.values)
         
-
     def add_buttons(self, buttons=TABLE_BUTTONS):
         for b in TABLE_BUTTONS:
             if b in buttons:
@@ -344,8 +342,6 @@ class DTable(QWidget):
 
     def values(self) -> dict:
         return self._table.values()
-    
-    
 
     
 class Tree(QTreeWidget, ProtoWidget):
